@@ -5,6 +5,16 @@ class Router {
     this._loadInitialRoute();
   }
 
+  loadRoute(...urlSegs){
+    const matchedRoute = this._matchUrlToRoute(urlSegs);
+
+    const url = `/${urlSegs.join('/')}`;
+    history.pushState({}, 'This works!', url);
+
+    const routerOutElement = document.querySelectorAll('[data-router]')[0];
+    routerOutElement.innerHTML = matchedRoute.template;
+  }
+
   _matchUrlToRoute(urlSegs){
     const matchedRoute = this.routes.find(route => {
       const routePathSegs = route.path.split('/').slice(1)
@@ -16,7 +26,7 @@ class Router {
     });
     
     return matchedRoute;
-
+  }
   _loadInitialRoute(){
     const pathNameSplit = window.location.pathname.split('/');
     const pathSegs = pathNameSplit.length > 1 ? pathNameSplit.slice(1) : '';
@@ -24,4 +34,3 @@ class Router {
   }
 
 }
-
