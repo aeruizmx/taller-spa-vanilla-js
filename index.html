@@ -4,17 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taller SPA con VanillaJs</title>
+  <style>
+    body {
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+    .menu--item {
+      cursor: pointer;
+    }
+    .menu--item:hover {
+      color: limegreen;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <ul>
-      <li><button>Home</button></li>
-      <li><button>Contacto</button></li>
-      <li><button>Acerca de mi</button></li>
-    </ul>
+  <headerclass="menu">
+    <divclass="menu--item"onclick="">
+      <p>Home</p>
+    </div>
+    <divclass="menu--item"onclick="">
+      <p>Contact</p>
+    </div>
+    <divclass="menu--item"onclick="">
+      <p>About me</p>
+    </div>
   </header>
-  <main>
-    <h1>Hola estudiante! Estás en el Home</h1>
-  </main>
 </body>
 </html>
