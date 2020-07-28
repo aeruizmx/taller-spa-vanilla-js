@@ -5,7 +5,7 @@ const routes = [
   },
   {
     path: '/contact',
-    template: '<h1>Contacto</h1>'
+    template: '<h1>Contacto: andres87aldos@gmail.com</h1>'
   },
   {
     path: '/about',
